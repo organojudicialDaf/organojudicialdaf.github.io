@@ -1,0 +1,4 @@
+$(document).ready(function ($) {
+    //$('.five-sixths, .four-sixths, .four-fifths, .one-fifth, .one-fourth, .one-half, .one-sixth, .one-third, .three-fourths, .three-fifths, .three-sixths, .two-fourths, .two-fifths, .two-sixths, .two-thirds').matchHeight(); //set your target CSS class
+    $('.portfolio-content .entry').matchHeight();
+});

@@ -1,0 +1,415 @@
+var config = {
+        container: "#OrganiseChart1",
+        rootOrientation:  'NORTH', // NORTH || EAST || WEST || SOUTH
+        hideRootNode: true,
+        //levelSeparation: 30,
+        siblingSeparation:   40,
+        subTeeSeparation:    30,
+        
+        connectors: {
+            type: 'curve'
+        },
+        node: {
+            HTMLclass: 'organigrama-jurisdiccional'
+        }
+    },
+    root = {},
+
+    salaPlena = {
+        parent: root,
+        text:{
+            name: "SALA PLENA",
+            title: "Conformado por 9 Magistrados",
+
+        },
+        HTMLid: "salaPlena",
+        HTMLclass: "sala-plena"
+    },
+
+    presidente = {
+        parent: salaPlena,
+        text:{
+            name: "PRESIDENCIA"
+        },
+        HTMLid: "presidente",
+        HTMLclass: "presidente",
+        link: {
+            href: "http://192.168.4.58/tsj.bo/?page_id=2072"
+        },
+    },
+
+    salaPenal = {
+        parent: presidente,
+        stackChildren: true,
+        text:{
+            name: "Sala Penal",
+        },
+        HTMLid: "salaPenal",
+        HTMLclass: "sala-penal"
+    },
+
+    salaCivil = {
+        parent: presidente,
+        stackChildren: true,
+        text: {
+            name: "Sala Civil"
+        },
+        HTMLid: "salaCivil",
+        HTMLclass: "sala-civil"
+    },
+
+    salaPrimera = {
+        parent: presidente,
+        stackChildren: true,
+        text: {
+            name: "Sala Contenciosa, Social, y Administrativa - Primera",
+            /*title: "Primera"*/
+        },
+        HTMLid: "salaPrimera",
+        HTMLclass: "sala-primera"
+    },
+
+    salaSegunda = {
+        parent: presidente,
+        stackChildren: true,
+        text: {
+            name: "Sala Contenciosa, Social, y Administrativa - Segunda",
+            /*title: "Segunda"*/
+        },
+        HTMLid: "salaSegunda",
+        HTMLclass: "sala-segunda"
+    },
+
+    /*presidentes magistrados*/
+    presidenteMagistradoPenal = {
+        parent: salaPenal,
+        text: {
+            name: "Presidente y Magistrado de Sala",
+        },
+        HTMLid: "presidenteMagistradoPenal",
+        HTMLclass: "sala-penal-hijos"
+    }
+
+    presidenteMagistradoCivil = {
+        parent: salaCivil,
+        text: {
+            name: "Presidente y Magistrado de Sala",
+        },
+        HTMLid: "presidenteMagistradoCivil",
+        HTMLclass: "sala-civil-hijos"
+    }
+
+    presidenteMagistradoPrimera = {
+        parent: salaPrimera,
+        text: {
+            name: "Presidente y Magistrado de Sala",
+        },
+        HTMLid: "presidenteMagistradoPrimera",
+        HTMLclass: "sala-primera-hijos"
+    }
+
+    presidenteMagistradoSegunda = {
+        parent: salaSegunda,
+        text: {
+            name: "Presidente y Magistrado de Sala",
+        },
+        HTMLid: "presidenteMagistradoSegunda",
+        HTMLclass: "sala-segunda-hijos"
+    }
+
+/*letrados salas*/
+
+    letradoPenal = {
+        parent: salaPenal,
+        text: {
+            name: "Letrado"
+        },
+        HTMLid: "letradoPenal",
+        HTMLclass: "sala-penal-hijos"
+    }
+
+    letradoCivil = {
+        parent: salaCivil,
+        text: {
+            name: "Letrado"
+        },
+        HTMLid: "letradoCivil",
+        HTMLclass: "sala-civil-hijos"
+    }
+
+    letradoPrimera = {
+        parent: salaPrimera,
+        text: {
+            name: "Letrado"
+        },
+        HTMLid: "letradoPrimera",
+        HTMLclass: "sala-primera-hijos"
+    }
+
+    letradoSegunda = {
+        parent: salaSegunda,
+        text: {
+            name: "Letrado"
+        },
+        HTMLid: "letradoSegunda",
+        HTMLclass: "sala-segunda-hijos"
+    }
+
+    /*secretarias*/
+    secretarioSalaPenal = {
+        parent: salaPenal,
+        text: {
+            name: "Secretario(a) de Sala"
+        },
+        HTMLid: "secretarioSalaPenal",
+        HTMLclass: "sala-penal-hijos"
+    }
+
+    secretarioSalaCivil = {
+        parent: salaCivil,
+        text: {
+            name: "Secretario(a) de Sala"
+        },
+        HTMLid: "secretarioSalaCivil",
+        HTMLclass: "sala-civil-hijos"
+    }
+
+    secretarioSalaPrimera = {
+        parent: salaPrimera,
+        text: {
+            name: "Secretario(a) de Sala"
+        },
+        HTMLid: "secretarioSalaPrimera",
+        HTMLclass: "sala-primera-hijos"
+    }
+
+    secretarioSalaSegunda = {
+        parent: salaSegunda,
+        text: {
+            name: "Secretario(a) de Sala"
+        },
+        HTMLid: "secretarioSalaSegunda",
+        HTMLclass: "sala-segunda-hijos"
+    }
+
+    /*abogados*/
+    abogadosSalaPenal = {
+        parent: salaPenal,
+        text: {
+            name: "Abogados Asistentes"
+        },
+        HTMLid: "abogadosSalaPenal",
+        HTMLclass: "sala-penal-hijos"
+    }
+
+    abogadosSalaCivil = {
+        parent: salaCivil,
+        text: {
+            name: "Abogados Asistentes"
+        },
+        HTMLid: "abogadosSalaCivil",
+        HTMLclass: "sala-civil-hijos"
+    }
+
+    abogadosSalaPrimera = {
+        parent: salaPrimera,
+        text: {
+            name: "Abogados Asistentes"
+        },
+        HTMLid: "abogadosSalaPrimera",
+        HTMLclass: "sala-primera-hijos"
+    }
+
+    abogadosSalaSegunda = {
+        parent: salaSegunda,
+        text: {
+            name: "Abogados Asistentes"
+        },
+        HTMLid: "abogadosSalaSegunda",
+        HTMLclass: "sala-segunda-hijos"
+    }
+
+    /*auxiliares*/
+    auxiliaresSalaPenal = {
+        parent: salaPenal,
+        text: {
+            name: "Auxiliares"
+        },
+        HTMLid: "auxiliaresSalaPenal",
+        HTMLclass: "sala-penal-hijos"
+    }
+
+    auxiliaresSalaCivil = {
+        parent: salaCivil,
+        text: {
+            name: "Auxiliares"
+        },
+        HTMLid: "auxiliaresSalaCivil",
+        HTMLclass: "sala-civil-hijos"
+    }
+
+    auxiliaresSalaPrimera = {
+        parent: salaPrimera,
+        text: {
+            name: "Auxiliares"
+        },
+        HTMLid: "auxiliaresSalaPrimera",
+        HTMLclass: "sala-primera-hijos"
+    }
+
+    auxiliaresSalaSegunda = {
+        parent: salaSegunda,
+        text: {
+            name: "Auxiliares"
+        },
+        HTMLid: "auxiliaresSalaSegunda",
+        HTMLclass: "sala-segunda-hijos"
+    }
+
+    /*oficiales de diligencias*/
+    oficialesDiligenciasPenal = {
+        parent: salaPenal,
+        text: {
+            name: "Oficiales de diligencias"
+        },
+        HTMLid: "oficialesDiligenciasPenal",
+        HTMLclass: "sala-penal-hijos"
+    }
+
+    oficialesDiligenciasCivil = {
+        parent: salaCivil,
+        text: {
+            name: "Oficiales de diligencias"
+        },
+        HTMLid: "oficialesDiligenciasCivil",
+        HTMLclass: "sala-civil-hijos"
+    }
+
+    oficialesDiligenciasPrimera = {
+        parent: salaPrimera,
+        text: {
+            name: "Oficiales de diligencias"
+        },
+        HTMLid: "oficialesDiligenciasPrimera",
+        HTMLclass: "sala-primera-hijos"
+    }
+
+    oficialesDiligenciasSegunda = {
+        parent: salaSegunda,
+        text: {
+            name: "Oficiales de diligencias"
+        },
+        HTMLid: "oficialesDiligenciasSegunda",
+        HTMLclass: "sala-segunda-hijos"
+    }
+
+        
+    /*de Sala Plena*/
+
+    /**pseudo*/
+    pseudo = {
+        parent: salaPlena,
+        pseudo: true,
+        childrenDropLevel: 2,
+        stackChildren: true
+    }
+
+    letradoPlena = {
+        parent: pseudo,
+        text: {
+            name: "Letrado"
+        },
+        HTMLid: "letradoPlena",
+        HTMLclass: "sala-plena-hijos"
+    }
+
+    secretarioSalaPlena = {
+        parent: pseudo,
+        text: {
+            name: "Secretario(a) de Sala"
+        },
+        HTMLid: "secretarioSalaPlena",
+        HTMLclass: "sala-plena-hijos"
+    }
+
+    abogadosSalaPlena = {
+        parent: pseudo,
+        text: {
+            name: "Abogados Asistentes"
+        },
+        HTMLid: "abogadosSalaPlena",
+        HTMLclass: "sala-plena-hijos"
+    }
+
+    auxiliaresSalaPlena = {
+        parent: pseudo,
+        text: {
+            name: "Auxiliares"
+        },
+        HTMLid: "auxiliaresSalaPlena",
+        HTMLclass: "sala-plena-hijos"
+    }
+
+    oficialesDiligenciasPlena = {
+        parent: pseudo,
+        text: {
+            name: "Oficiales de diligencias"
+        },
+        HTMLid: "oficialesDiligenciasPlena",
+        HTMLclass: "sala-plena-hijos"
+    }
+
+    /**/
+
+
+    ALTERNATIVE = [
+        config,
+        root,
+        salaPlena,
+        presidente,
+        salaPenal,
+        salaCivil,
+        salaPrimera,
+        salaSegunda,
+
+        presidenteMagistradoPenal,
+        presidenteMagistradoCivil,
+        presidenteMagistradoPrimera,
+        presidenteMagistradoSegunda,
+
+        letradoPenal,
+        letradoCivil,
+        letradoPrimera,
+        letradoSegunda,
+
+        secretarioSalaPenal,
+        secretarioSalaCivil,
+        secretarioSalaPrimera,
+        secretarioSalaSegunda,
+
+        abogadosSalaPenal,
+        abogadosSalaCivil,
+        abogadosSalaPrimera,
+        abogadosSalaSegunda,
+
+        auxiliaresSalaPenal,
+        auxiliaresSalaCivil,
+        auxiliaresSalaPrimera,
+        auxiliaresSalaSegunda,
+
+        oficialesDiligenciasPenal,
+        oficialesDiligenciasCivil,
+        oficialesDiligenciasPrimera,
+        oficialesDiligenciasSegunda,
+        
+        /* de sala Plena*/
+        letradoPlena,
+        secretarioSalaPlena,
+        abogadosSalaPlena,
+        auxiliaresSalaPlena,
+        oficialesDiligenciasPlena,
+
+        pseudo
+
+
+    ];

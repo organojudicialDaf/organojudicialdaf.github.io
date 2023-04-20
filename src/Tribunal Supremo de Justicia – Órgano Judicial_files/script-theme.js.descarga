@@ -1,0 +1,13 @@
+$(document).ready(function(){
+	$('ul li a').click(function(){
+		$('li').removeClass("active");
+		$(this).parent().addClass("active");
+	});
+	
+	$(".sidebar-primary ul li a").each(function(){
+		if ($(this).attr("href") == window.location.href){
+			$(this).parent().addClass("active");
+		}
+	});
+});
+

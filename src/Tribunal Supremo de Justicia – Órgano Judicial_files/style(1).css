@@ -1,0 +1,1018 @@
+/**
+ * Theme Name:          Mai Lifestyle Pro
+ * Description:         Mai Lifestyle Pro is a custom child theme for The Genesis Framework.
+ * Author:              Mike Hemberger, BizBudding Inc
+ * Author URI:          https://bizbudding.com/
+ * Version:             1.1.0
+ *
+ * Template:            genesis
+ *
+ * License:             GPL-2.0+
+ * License URI:         http://www.opensource.org/licenses/gpl-license.php
+ */
+
+
+/* Table of Contents
+
+	- Defaults
+	- Structure and Layout
+	- Common Classes
+	- Content Area
+		- Entry Meta
+	- Media Queries (mobile-first)
+	- Media Queries (mobile-second)
+
+*/
+
+
+/* # Defaults
+---------------------------------------------------------------------------------------------------- */
+
+/**
+ * Retina Logo
+ *
+ * If uploading double sized (retina) image,
+ * put exactly half the width in pixels for retina display.
+ * Example: Retina (2x) image is 360px by 90px, CSS should be:
+ * max-width: 180px;
+ */
+.wp-custom-logo .site-title a {
+	/* max-width: 180px; */
+}
+
+body {
+	/*font-family: 'Open Sans', sans-serif;
+	font-weight: 300;*/
+	background-color: #fff;
+	color: #000 !important;
+	font-family: Muli, sans-serif;
+	font-size: 18px !important;/*important*/
+	font-weight: 300;
+	line-height: 1.875;
+	margin: 0;
+	overflow-x: hidden;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6,
+.site-title a,
+.adjacent-entry-pagination a {
+	/*font-family: 'Muli', sans-serif;
+	font-weight: 200;*/
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 500;
+	line-height: 1.2;
+	margin: 0 0 10px;
+}
+
+.banner-area .archive-title,
+.banner-area .author-box-title,
+.banner-area .entry-title,
+.heading,
+h1 {
+	/*font-family: 'Playfair Display', serif;*/
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.author-box-title,
+.entry-comments h3,
+.comment-respond h3,
+.widget-title,
+.related > h2,
+.up-sells > h2 {
+	/*font-family: 'Playfair Display', serif;*/
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/*
+.sidebar .widget-title {
+	text-align: left;	
+}*/
+
+/*añadido por alvaro*/
+.sidebar .widget-title {
+	text-align: left;
+	padding-right: 10px;
+	padding-left: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-size: 24px;
+	font-weight: 600;
+	background-color: #F1F4F5;
+	border-bottom: 3px solid #DADEDF;
+	margin-bottom: 0px;
+}
+
+/* # Content Area
+---------------------------------------------------------------------------------------------------- */
+
+.adjacent-entry-pagination a,
+.after-entry .widget,
+.author-box,
+.comment-respond,
+.entry,
+.entry-comments,
+.entry-pings,
+.sidebar .widget,
+.sticky-header.scroll .site-header {
+	-webkit-box-shadow: 0 4px 24px rgba(0,0,0,0.025);
+	box-shadow: 0 4px 24px rgba(0,0,0,0.025);
+}
+
+
+/* ## Entry Meta
+--------------------------------------------- */
+
+.entry-comments .comment-meta {
+	-webkit-font-smoothing: antialiased;
+}
+
+/* # Media Queries (mobile-first)
+---------------------------------------------------------------------------------------------------- */
+
+@media only screen and (min-width: 1160px) {}
+
+@media only screen and (min-width: 993px) {}
+
+@media only screen and (min-width: 769px) {}
+
+@media only screen and (min-width: 545px) {}
+
+/* # Media Queries (mobile-second)
+---------------------------------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 1159px) {}
+
+@media only screen and (max-width: 992px) {}
+
+@media only screen and (max-width: 768px) {
+	.ab-layout-columns-4>.ab-layout-column-wrap.ab-is-responsive-column {
+    /*grid-template-rows: auto;
+    -ms-grid-columns: 1fr 1fr;*/
+    display: grid;
+    grid-template-columns: auto auto !important;
+    grid-template-areas:
+        "col1 col2"
+        "col3 col4" !important;
+	}
+}
+
+@media only screen and (max-width: 544px) {}
+
+/*------------------------------------------------
+ALVARO STYLES START*/
+
+/*nav jurisprudencia buscadores*/
+.nav-buscadores-juris, .nav-buscadores-juris ul, .nav-buscadores-juris li {
+	list-style: none;
+	/*padding-left: 15px;*/
+	padding-right: 10px;
+}
+
+.nav-buscadores-juris li {
+	padding-left: 1.3em;
+}
+
+.nav-buscadores-juris ul {
+    padding: 0;
+}
+
+.nav-buscadores-juris {
+	padding-top: 4px;
+	padding-bottom: 5px;
+	margin: 0px;
+}
+
+.nav-buscadores-juris > li {
+	margin: 12px 0;
+}
+
+.nav-buscadores-juris > li li {
+    margin: 2px 0;
+}
+
+.nav-buscadores-juris a {
+	color: #96102E;
+	outline: none;
+	font-weight: 600;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+	text-decoration: none;
+	font-size: 18px;
+}
+
+.nav-buscadores-juris li:before {    
+    font-family: 'FontAwesome';
+	content: '\f002';
+	/*margin:0 10px 0 15px;*/
+	display: inline-block;
+	margin-left: -1.3em; /* same as padding-left set on li */
+	width: 1.3em; /* same as padding-left set on li */
+    color: #000;
+}
+
+.nav-buscadores-juris:before {    
+    font-family: 'FontAwesome';
+	/*content: '\f002';*/
+	content: '\f101';
+	display: inline-block;
+	margin-left: -1.5em; /* same as padding-left set on li */
+	width: 1.3em; /* same as padding-left set on li */
+    color: #000;
+}
+
+/*cambiado por el choco para el menu principal*/
+.nav-header a {
+	padding: 2px 12px;
+}
+
+/**/
+
+/*menus tsj sidebar lateral*/
+.menu-sidebar-lateral-fijo{
+	list-style: none;
+	background-color: #F1F4F5;
+	display: flex;
+	margin-left: -20px!important;
+	margin-bottom: 0px!important;
+	padding-right: 12px!important;
+	padding-bottom: 8px!important;
+	padding-top: 8px!important;
+}
+
+.menu-sidebar-lateral-fijo.active { color: #FCC737; }
+
+.menu-sidebar-lateral-fijo > a {
+	/*display: inline;*/
+	color: #000;
+	line-height: 1.7;
+}
+
+.menu-sidebar-lateral-fijo:hover{
+  background-color: #FCC737;
+}
+
+.menu-sidebar-lateral-fijo:focus{
+  background-color: #FCC737;
+}
+
+.menu-sidebar-lateral-fijo:before {    
+    font-family: 'FontAwesome';
+	/*content: '\f002';*/
+	content: '\f101';
+	display: inline-block;
+	margin-left: 1em; /* same as padding-left set on li */
+	width: 1.3em; /* same as padding-left set on li */
+    color: #000;
+}
+
+/* PARA UNA LISTA DE DESCARGAS DE PDF*/
+
+.menu-descargas-pdf li{
+	list-style: none;
+	/*background-color: #F1F4F5;*/
+	/*display: flex;*/
+	/*margin-left: -20px!important;*/
+	margin-bottom: 0px!important;
+	padding-right: 12px!important;
+	padding-bottom: 8px!important;
+	padding-top: 8px!important;
+}
+
+/*.menu-descargas-pdf.active { color: #FCC737; }*/
+
+.menu-descargas-pdf > a {
+	/*display: inline;*/
+	color: #000;
+	line-height: 1.7;
+}
+
+.menu-descargas-pdf:focus{
+  background-color: #FCC737;
+}
+
+.menu-descargas-pdf li::before {   
+    font-family: 'FontAwesome';
+	/*content: '\f002';*/
+	content: '\f1c1 ';
+	display: inline-block;
+	/*margin-left: 1em; /* same as padding-left set on li */
+	width: 1.3em; /* same as padding-left set on li */
+    color: #FF5733 ;
+}
+
+.menu-descargas-pdf a {
+	text-decoration: none;
+	color: #000;
+}
+
+.menu-descargas-pdf a:hover {
+	color: #33B0FF;
+}
+/**/
+
+
+
+
+/**/
+
+
+/* hasta aqui nav jurisprudencia buscadores*/
+
+/*nav jurisprudencia*/
+.nav-juris, .nav-juris ul, .nav-juris li {
+	list-style: none;
+}
+
+.nav-juris ul {
+    padding: 0;
+	margin: 0px 0px 0px 18px;
+}
+
+.nav-juris {
+	padding-top: 4px;
+	padding-bottom: 5px;
+	margin: 0px;
+}
+
+.nav-juris > li {
+	margin: 12px 0;
+}
+
+.nav-juris > li li {
+    margin: 2px 0;
+}
+
+.nav-juris a {
+	color: #000;
+    outline: none;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+	text-decoration: none;
+}
+
+.nav-juris li:before {    
+    font-family: 'FontAwesome';
+	content: '\f101';
+    margin:0 10px 0 15px;
+}
+/* hasta aqui nav jurisprudencia*/
+
+
+
+
+/*para los separadores*/
+.linea-separadora-titulos{
+	border-top: 3px solid #DADEDF;
+}
+
+.linea-separadora-magistrados{
+	border-top: 3px solid #FCE535;
+}
+
+.linea-nros-atribuciones-pleno{
+	padding-bottom: 6px;
+	border-bottom: 3px solid #FCE535;
+}
+
+
+/*div*/
+.title-sidebar-sticky{
+	background-color: #F1F4F5;
+	color: #000000;
+	padding: 15px 15px 5px 25px;
+	font-size: 15px;
+	border-bottom: 3px solid #DADEDF;
+}
+
+.title-sidebar-revistas-juris{
+	background-color: #323232;
+	color: white;
+	padding: 15px 15px 5px 25px;
+	font-size: 15px;
+	border-bottom: 3px solid #DADEDF;
+	text-align: center;
+}
+
+
+/*nav*/
+.style-nav{
+	margin-left: 0px;
+	background-color: #F1F4F5;
+}
+
+
+/*h1*/
+.titulo-subrayado{
+	text-align: center;
+	display: inline;
+	border-bottom: 3px solid #FCE535;
+	padding-bottom: 5px;
+	margin: 0 auto;
+}
+
+/*----------------------------- ALVARO STYLES END*/
+/**/
+.breadcrumb{
+	font-size: 16px;
+	font-weight: 500;
+	text-align: left;
+}
+/**/
+
+/*button*/
+.button-web{
+	font-weight: 600;
+}
+/**/
+
+/*font awesome social icons*/
+.fa, .fas {
+	padding: 10px;
+	font-size: 25px;
+	width: 50px;
+	text-align: center;
+	text-decoration: none;
+	margin: 5px 2px;
+	display: inline-block;
+  }
+  
+  .fa:hover .fas:hover{
+	  opacity: 0.7;
+  }
+  
+  .fa-facebook {
+	background: #3B5998;
+	color: white;
+  }
+  
+  .fa-twitter {
+	background: #55ACEE;
+	color: white;
+  }
+
+  .fa-youtube {
+	background: red;
+	color: white;
+  }
+
+ .fa-map-marked-alt{
+	background-color: #78909C;
+	 color: #ffffff;
+	
+ }
+  /**/
+
+  /*button web site*/
+  .btn {
+	background-color: #FFD900;
+	font-size: 20px;
+	color: #000;
+	font-weight: 500;
+	padding: 10px 15px 10px 15px;
+  }
+
+ /* Darker background on mouse-over */
+  .btn:hover {
+	background-color: #000;
+	color: #FFD900;
+  }
+  /**/
+
+  /*etiquetas amarillas*/
+  .centrado-etiqueta{
+	text-align: center;
+  }
+  .etiqueta-amarilla {
+	background-color: #FFD900;
+	font-size: 16px;
+	color: #000;
+	font-weight: 500;
+	padding: 5px 8px 5px 8px;
+	display: inline;
+	
+  }
+  /**/
+
+  /*PORTADA*/
+  .portada-slider-destacado{
+	  margin-top: -20px;
+	  margin-bottom: 10px;
+  }
+/**/
+
+/*button circle*/
+.circulo {
+	display: block;
+	width: 200px;/*210*/
+	height: 200px;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	background: #ECEFF1;
+	/*background-color: #fff;*/
+	color: #000;
+	margin: auto;
+}
+
+.a-none {
+	text-decoration: none!important;
+}
+
+.circulo:hover {
+	background-color: #B3B9BD;
+	color: #000;
+}
+
+.button:hover {
+	background-color: #ECEFF1;
+}
+
+.circulo h5 {
+	font-size: 1.1em;
+}
+
+/*.circulo h5:hover{
+	color: #ffd700;
+}*/
+
+/*Iconos segunda seccion con descripcion y sin circulo*//*guardado en reutilizables*/
+.segunda-seccion {
+	display: block;
+	width: 100%;
+	background: none;
+	color: #000;
+	margin: auto;
+}
+
+.titulo-segunda-seccion{
+	margin-top: 12px;
+}
+
+
+/*para iconos y titulo debajo*/
+
+/*button*/
+.icono-titulo {
+	display: block;
+	width: 100%;
+	/*height: 150px;*/
+	/*background: none;*/
+	color: #000;
+	margin: auto;
+	padding-top:18px;
+	padding-left: 2px;
+	padding-right: 2px;
+	background-color: #F0F2F5;
+}
+
+.texto-iconos-abajo{
+	padding-top: 20px;
+	padding-bottom: 2px; 
+	margin-bottom: 5px;
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+
+/**/
+
+.iconos-sistemas-judiciales {
+	display: block;
+	width: 220px;
+	height: 150px;
+	background: none;
+	color: #000;
+	margin: auto;
+}
+
+.iconos-sistemas-judiciales:hover {
+	background: none;
+	background: #F1F4F5;
+	color: black;
+}
+
+.enlace-servicios-judiciales:active {
+	background: none;
+	background: #F1F4F5;
+	color: black;
+}
+
+/*NUEVO DE ALVARO ENLACES RECTANGULARES*/
+/*para la etiqueta a*/
+.enlace-rectangular{
+	/*display: inline;*/
+}
+
+/*para el button*/
+.button-rectangular{
+	display: block;
+	background-color: #fff;	
+}
+
+/*fondo circular para el icono*/
+.icono-circulo{
+	display: flex;
+ 	align-items: center;
+	width: 85px;
+	height: 85px;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	background-color: #F1F4F5;
+	margin: auto;
+}
+
+/*para centrar la imagen*/
+.icono-centrado{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	height: 50px;
+	width: 50px;
+}
+
+.texto-enlace{
+	/*padding-left: 8px;*/
+	text-align: center;
+	color: black;
+	padding-top: 12px;
+	text-transform: uppercase;
+}
+
+
+/**/
+
+.espacio-h5{
+	padding-top: 10px;
+	padding-bottom: 2px; 
+	margin-bottom: 5px;
+}
+
+
+/*menu*/
+/*MENU PRINCIPAL*/
+
+.nav-header_right{
+    /*fuente puesta recien*/
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	font-size: 16px;
+}
+
+.nav-primary{
+	border-bottom: 6px solid #FCC737;
+}
+
+.nav-primary li, .nav-primary a{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.nav-primary a:hover{
+	color:#FFD900;
+	background-color: black;
+  }
+
+
+/**/
+
+/*button general*/
+
+.button-tsj {
+	border-radius: none;
+}
+
+/*ANCLAJE*/
+:target::before {
+  content: "";
+  display: block;
+  height: 130px; /* aquí la altura de la cabecera fija*/
+  margin: -130px 0 0; /* altura negativa de la cabecera fija */
+}
+
+/* ESTILOS AGREGADOS - PABLO
+------------------------------------------------------------ */
+
+/* Titulo de la paginas
+------------------------------------------------------------ */
+.content-sidebar-wrap .entry-header h1.entry-title {
+	text-transform: uppercase;
+	border-bottom: 3px solid #DADEDF;
+	padding: 10px 0;
+	margin-bottom: 30px;
+	font-weight: 700;
+}
+
+/* Titulo de la pagina de publicaciones
+------------------------------------------------------------ */
+.publicaciones .entry-header h1.entry-title,
+.archive-description h1.archive-title {
+	text-transform: uppercase;
+	border-bottom: 3px solid #DADEDF;
+	padding: 10px 0;
+	font-weight: 700;
+}
+
+/* Ultimo widget Fijo del Sidebar Primary
+------------------------------------------------------------ */
+@media only screen and (min-width: 993px) {
+	.content-sidebar-wrap {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+		margin-top: 18px;/*espacio breadcrumd y lo de abajo*/
+	}
+	.sidebar-primary .widget:last-child {
+		position: -webkit-sticky;
+		position: sticky;
+		top: 130px;
+		margin-bottom: 50px;
+	}
+}
+
+/* Portfolio Filtrable
+--------------------------------------------- */
+.portfolio-content .entry {
+	width: 100%;
+	text-align: center;
+	background-color: #ECEFF1;
+}
+
+@media only screen and (min-width: 512px) {
+	.portfolio-content .entry {
+		width: -webkit-calc(50% - 1rem);
+		width: calc(50% - 1rem);
+		padding: 0;
+	}
+}
+
+@media only screen and (min-width: 860px) {
+	.portfolio-content .entry {
+		width: -webkit-calc(33.333333333% - 1.333333333rem);
+		width: calc(33.333333333% - 1.333333333rem);
+		padding: 0;
+	}
+}
+
+.portfolio-content .entry-header .entry-title {
+	font-size: 12px;
+	font-size: 1.2rem;
+	margin: 0;
+	padding: 20px;
+}
+
+.portfolio-content .entry .entry-content {
+	padding: 0;
+}
+
+.portfolio-content .entry .portfolio-featured-image {
+	position: relative;
+	display: block;
+}
+
+.portfolio-content .entry .portfolio-featured-image img {
+	vertical-align: middle;
+	margin: 0;
+	width: 100%;
+}
+
+.portfolio-content .entry .portfolio-featured-image:hover:after {
+	opacity: 1;
+}
+
+/* Color blanco del titulo de la Sección Enlaces de Interes - Pagina Principal
+----------------------------------------------- */
+.title-enlaces-de-interes {
+	color: #fff;
+}
+
+/* Centrar titulos de las publicaciones
+----------------------------------------------- */
+/*
+.publicaciones .entry-header .entry-title {
+	text-align: center;
+}
+*/
+
+/* Color de fondo de la publicaciones
+----------------------------------------------- */
+.entry.boxed {
+	background-color: #eceff1;
+}
+
+/* Quitar margen inferior de las paginas
+----------------------------------------------- */
+.content-sidebar-wrap {
+	margin-bottom: 0;
+}
+
+/*#genesis-content {
+	margin-bottom: 0;
+}*/
+
+/* Quitar margen inferior de la pagina principal
+----------------------------------------------- */
+.post-1917 {
+	margin-bottom: 0;
+}
+
+/* Personalizar Columnas de Publicacion de Circulares, Instructivos y otros
+----------------------------------------------- */
+.publicacion-pdf > .wp-block-column {
+	background-color: #eceff1;
+	padding: 20px;
+	text-align: center;
+}
+
+.publicacion-pdf > .wp-block-column a {
+	color: #64767D;
+	text-decoration: none;
+}
+
+.publicacion-pdf > .wp-block-column p {
+	font-family: impact, chicago;
+	font-size: 25px;
+	color: #900020;
+	margin-bottom: 0;
+}
+
+.publicacion-pdf > .wp-block-column a:hover,
+.publicacion-pdf > .wp-block-column a:focus {
+	color: #900020;
+}
+
+/* Personalizar Publicacion de Leyes
+----------------------------------------------- */
+
+.publicacion-pdf > ul {
+	list-style: none;
+}
+.publicacion-pdf > li {
+	background: #F1F4F5;
+    padding: 10px 15px;
+	list-style: none;
+	font-weight: 700;
+	color: #323232;
+}
+
+.publicacion-pdf > li:before {
+	font-family: 'FontAwesome';
+	/*content: '\f0da';*/
+	content: '\f1c1';
+	color: #FF5733;
+	margin-right: 10px;
+}
+
+.publicacion-pdf > li:hover,
+.publicacion-pdf > li:focus {
+	background: #fcc737;
+	cursor: hand;
+}
+
+.publicacion-pdf > li > a {
+	color: #323232;
+	text-decoration: none;
+}
+
+/*.publicacion-pdf > li > a:hover {
+	color: #900020;
+}*/
+
+/* Quitar margen inferior del slider pagina principal */
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+
+.banner-page-principal {
+	margin-bottom:10px;
+}
+
+/*.slider-page-principal .ab-block-layout-column {
+	margin-bottom:0;
+}*/
+
+.div-circular {
+	width: 250px;
+	height: 250px;
+	background: #F1F4F5;
+	border-radius: 50%;
+	display: block;
+	text-align: center;
+}
+
+
+.div-circular figcaption > a {
+	font-size: 1em;
+	font-weight: 400;
+	color: black;
+}
+
+.div-circular figcaption > a:hover {
+	color: #e5be01;
+}
+
+.div-circular figure {
+	padding: 10px 10px 0;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.div-circular:hover{
+	background: #E0E0E0;
+}
+
+/*otro para solo iconos*/
+.div-circular-02 {
+	width: 100px;
+	height: 100px;
+	background: #FCC737;
+	border-radius: 50%;
+	/*display: block;*/
+	text-align: center;
+}
+
+.centrado{
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+}
+.div-circular-02:hover{
+	background: #E0E0E0;
+	
+}
+
+/* Personalizar Enlaces a los buscadores en la pagina de Jurisprudencia */
+.linea-search-autos {
+	border: 2px solid #c00000;
+	width: 80%;
+	margin-bottom: 10px;
+}
+
+.linea-search-juris {
+	border: 2px solid #ffc107;
+	width: 80%;
+	margin-bottom: 10px;
+}
+
+.linea-search-fichas {
+	border: 2px solid #0b6623;
+	width: 80%;
+	margin-bottom: 10px;
+	
+}
+
+.column-buscadores-jurisprudencia {
+	border: 1px solid #e4e7ea;
+	background: #ECEFF1;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.column-buscadores-jurisprudencia figure {
+	margin-top: 20px;
+}
+
+/* Cambiar color al acercar el cursor */
+.wp-block-button__link:hover {
+	background-color: #ceaf18;
+}
+
+/* color de fondo del elemento li seleccionado en el menu */
+.active {
+  background-color: #FCC737;
+}
+
+/* Cambiar bordes de los botones de gutenberg */
+.wp-block-button__link {
+	border-radius: 5px;
+}
+
+/* Corregir el color de los enlaces cuando el enlace esta abierto */
+button:focus {
+	background-color: #B3B9BD;
+	color: #000;
+}
+
+/*MetaSlider*/
+.metaslider .caption,
+.metaslider .cs-title,
+.metaslider .nivo-caption {
+    background: hsla(356, 100%, 29%, 0.5);
+}
+
+/*Separador*/
+.wp-block-separator {
+    border-top: 2px solid;
+    border-bottom: 1px solid;
+    color: #DADEDF;
+}
